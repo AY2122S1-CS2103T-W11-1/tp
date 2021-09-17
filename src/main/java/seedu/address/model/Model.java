@@ -10,9 +10,9 @@ import seedu.address.model.person.Person;
 /**
  * The API of the Model component.
  */
-public interface Model {
+public interface Model<T> {
     /** {@code Predicate} that always evaluate to true */
-    Predicate<Person> PREDICATE_SHOW_ALL_PERSONS = unused -> true;
+    Predicate<Person> PREDICATE_SHOW_ALL = unused -> true;
 
     /**
      * Replaces user prefs data with the data in {@code userPrefs}.
@@ -53,35 +53,35 @@ public interface Model {
     ReadOnlyAddressBook getAddressBook();
 
     /**
-     * Returns true if a person with the same identity as {@code person} exists in the address book.
+     * Returns true if an item with the same identity exists.
      */
-    boolean hasPerson(Person person);
+    boolean has(T item);
 
     /**
-     * Deletes the given person.
-     * The person must exist in the address book.
+     * Deletes the given item.
+     * The item must exist.
      */
-    void deletePerson(Person target);
+    void delete(T target);
 
     /**
-     * Adds the given person.
-     * {@code person} must not already exist in the address book.
+     * Adds the given item.
+     * item must not already exist.
      */
-    void addPerson(Person person);
+    void add(T item);
 
     /**
-     * Replaces the given person {@code target} with {@code editedPerson}.
-     * {@code target} must exist in the address book.
-     * The person identity of {@code editedPerson} must not be the same as another existing person in the address book.
+     * Replaces the given item {@code target} with {@code editedItem}.
+     * {@code target} must exist.
+     * The item identity of {@code editedItem} must not be the same as another existing item in the address book.
      */
-    void setPerson(Person target, Person editedPerson);
+    void set(T target, T editedItem);
 
-    /** Returns an unmodifiable view of the filtered person list */
-    ObservableList<Person> getFilteredPersonList();
+    /** Returns an unmodifiable view of the filtered item list */
+    ObservableList<T> getFilteredList();
 
     /**
      * Updates the filter of the filtered person list to filter by the given {@code predicate}.
      * @throws NullPointerException if {@code predicate} is null.
      */
-    void updateFilteredPersonList(Predicate<Person> predicate);
+    void updateFilteredList(Predicate<T> predicate);
 }
