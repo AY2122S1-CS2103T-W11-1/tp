@@ -14,24 +14,23 @@ import seedu.address.logic.parser.AddressBookParser;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.Model;
 import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.person.Person;
 import seedu.address.storage.Storage;
 
 /**
  * The main LogicManager of the app.
  */
-public class LogicManager implements Logic {
+public class LogicManager<T> implements Logic<T> {
     public static final String FILE_OPS_ERROR_MESSAGE = "Could not save data to file: ";
     private final Logger logger = LogsCenter.getLogger(LogicManager.class);
 
-    private final Model model;
+    private final Model<T> model;
     private final Storage storage;
     private final AddressBookParser addressBookParser;
 
     /**
      * Constructs a {@code LogicManager} with the given {@code Model} and {@code Storage}.
      */
-    public LogicManager(Model model, Storage storage) {
+    public LogicManager(Model<T> model, Storage storage) {
         this.model = model;
         this.storage = storage;
         addressBookParser = new AddressBookParser();
@@ -60,7 +59,7 @@ public class LogicManager implements Logic {
     }
 
     @Override
-    public ObservableList<Person> getFilteredPersonList() {
+    public ObservableList<T> getFilteredList() {
         return model.getFilteredList();
     }
 

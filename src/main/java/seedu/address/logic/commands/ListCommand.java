@@ -5,20 +5,18 @@ import static seedu.address.model.Model.PREDICATE_SHOW_ALL;
 
 import seedu.address.model.Model;
 
-/**
- * Lists all persons in the address book to the user.
- */
-public class ListCommand extends Command {
+public abstract class ListCommand<T> extends Command<T> {
 
-    public static final String COMMAND_WORD = "list";
-
-    public static final String MESSAGE_SUCCESS = "Listed all persons";
-
+    /**
+     * @return String when command executed successfully.
+     */
+    public abstract String getMessageSuccess();
 
     @Override
-    public CommandResult execute(Model model) {
+    public CommandResult execute(Model<T> model) {
         requireNonNull(model);
         model.updateFilteredList(PREDICATE_SHOW_ALL);
-        return new CommandResult(MESSAGE_SUCCESS);
+        return new CommandResult(getMessageSuccess());
     }
+
 }
