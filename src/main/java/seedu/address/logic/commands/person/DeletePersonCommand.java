@@ -1,6 +1,7 @@
-package seedu.address.logic.commands;
+package seedu.address.logic.commands.person;
 
 import seedu.address.commons.core.index.Index;
+import seedu.address.logic.commands.DeleteCommand;
 import seedu.address.model.person.Person;
 
 /**

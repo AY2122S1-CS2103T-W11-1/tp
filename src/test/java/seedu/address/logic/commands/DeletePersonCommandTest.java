@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
+import seedu.address.logic.commands.person.DeletePersonCommand;
 import seedu.address.model.Model;
 import seedu.address.model.PersonModelManager;
 import seedu.address.model.UserPrefs;

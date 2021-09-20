@@ -7,7 +7,9 @@ import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.logic.commands.DeletePersonCommand;
+import seedu.address.logic.commands.person.DeletePersonCommand;
+import seedu.address.logic.parser.person.DeletePersonCommandParser;
+import seedu.address.model.person.Person;
 
 /**
  * As we are only doing white-box testing, our test cases do not cover path variations
@@ -18,7 +20,7 @@ import seedu.address.logic.commands.DeletePersonCommand;
  */
 public class DeletePersonCommandParserTest {
 
-    private DeleteCommandParser parser = new DeleteCommandParser();
+    private DeleteCommandParser<Person> parser = new DeletePersonCommandParser();
 
     @Test
     public void parse_validArgs_returnsDeleteCommand() {

@@ -7,21 +7,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import seedu.address.logic.commands.AddCommand;
-import seedu.address.logic.commands.ClearPersonCommand;
 import seedu.address.logic.commands.Command;
-import seedu.address.logic.commands.DeletePersonCommand;
-import seedu.address.logic.commands.EditPersonCommand;
 import seedu.address.logic.commands.ExitCommand;
-import seedu.address.logic.commands.FindPersonCommand;
 import seedu.address.logic.commands.HelpCommand;
-import seedu.address.logic.commands.ListPersonCommand;
+import seedu.address.logic.commands.person.ClearPersonCommand;
+import seedu.address.logic.commands.person.DeletePersonCommand;
+import seedu.address.logic.commands.person.EditPersonCommand;
+import seedu.address.logic.commands.person.FindPersonCommand;
+import seedu.address.logic.commands.person.ListPersonCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.logic.parser.person.AddPersonCommandParser;
+import seedu.address.logic.parser.person.DeletePersonCommandParser;
 import seedu.address.model.person.Person;
 
 /**
  * Parses user input.
  */
-public class AddressBookParser {
+public class AddressBookParser implements FridgyParser<Person> {
 
     /**
      * Used for initial separation of command word and args.
@@ -35,6 +37,7 @@ public class AddressBookParser {
      * @return the command based on the user input
      * @throws ParseException if the user input does not conform the expected format
      */
+    @Override
     public Command<Person> parseCommand(String userInput) throws ParseException {
         final Matcher matcher = BASIC_COMMAND_FORMAT.matcher(userInput.trim());
         if (!matcher.matches()) {
@@ -46,13 +49,13 @@ public class AddressBookParser {
         switch (commandWord) {
 
         case AddCommand.COMMAND_WORD:
-            return new AddCommandParser().parse(arguments);
+            return new AddPersonCommandParser().parse(arguments);
 
         case EditPersonCommand.COMMAND_WORD:
             return new EditCommandParser().parse(arguments);
 
         case DeletePersonCommand.COMMAND_WORD:
-            return new DeleteCommandParser().parse(arguments);
+            return new DeletePersonCommandParser().parse(arguments);
 
         case ClearPersonCommand.COMMAND_WORD:
             return new ClearPersonCommand();
@@ -64,10 +67,10 @@ public class AddressBookParser {
             return new ListPersonCommand();
 
         case ExitCommand.COMMAND_WORD:
-            return new ExitCommand();
+            return new ExitCommand<>();
 
         case HelpCommand.COMMAND_WORD:
-            return new HelpCommand();
+            return new HelpCommand<>();
 
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
