@@ -10,7 +10,8 @@ import fridgy.commons.util.AppUtil;
  */
 public class Tag {
 
-    public static final String MESSAGE_CONSTRAINTS = "Tag names should be alphanumeric";
+    public static final String MESSAGE_CONSTRAINTS = "Tag names should be alphanumeric \n"
+            + "(tags with multiple words must only be separated by a single space)";
     public static final String VALIDATION_REGEX = "^[a-zA-Z0-9]+( [a-zA-Z0-9]+)*$";
     public static final Tag EXPIRED = new Tag("expired");
     public static final Tag EXPIRING = new Tag("expiring");
