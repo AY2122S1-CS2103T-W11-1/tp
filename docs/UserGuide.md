@@ -196,6 +196,8 @@ Closes the window and exits the program. All your information will be saved.
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### 4.4 Ingredients
 This section covers commands related to Inventory management. Any command primarily interacting with ingredients will 
 be here.
@@ -234,6 +236,8 @@ Add an ingredient to the Inventory.
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 #### 4.4.2 Delete Ingredient
 
 Delete ingredient(s) from the Inventory.
@@ -255,6 +259,8 @@ Delete ingredient(s) from the Inventory.
 - If multiple index numbers are specified, Fridgy will delete the ingredients at all specified index numbers.
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.4.3 Edit Ingredient
 
@@ -285,6 +291,8 @@ Edit an ingredient from the Inventory.
     
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 #### 4.4.4 Clear Ingredient
 
 Clear all the ingredients from the Inventory. Add `expired` keyword to only clear expired ingredients.
@@ -307,6 +315,8 @@ Command: `clear ingredient expired`
 ![clearCommand3.png](images/ingredientCommands/clearExpired2.png)   
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.4.5 Find Ingredient
 
@@ -349,6 +359,8 @@ Switch to Ingredient [tab](#31-tabs) and list all ingredients.
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 #### 4.4.7 View Ingredient
 
 Open an ingredient in the [Main Window](#36-mainwindow).
@@ -366,7 +378,9 @@ Open an ingredient in the [Main Window](#36-mainwindow).
   [Side Bar](#32-side-bar).
 
 [\[Back to Table of Contents\]](#table-of-contents)
-  
+
+<div style="page-break-after: always;"></div>
+
 ### 4.5 Recipes
 This sections covers commands related to Recipe Book management. Any command primarily interacting with recipes will
 be here.
@@ -382,7 +396,7 @@ Add a recipe to the Recipe Book.
 1. Minimal command flags used:<br /> 
 Command: `add recipe -n pasta -i tomato 2 -i linguine 50g`
 <br />Expected Output:<br />
-![addRecipe1.png](images/recipeCommands/addRecipe1.png)
+<img src="images/recipeCommands/addRecipe1.png" height="650px" />
 <br /> <br />
 2. All command flags used:<br />
 Command:`add recipe -n Grilled Lamb Chop with Mint Puree -i Mint 5g -i Lamb Chops 1kg -i Butter 20g -i Garlic 20g -s Season
@@ -400,6 +414,8 @@ the lamb chops with salt and pepper. -s Grill the lamb chops over medium high he
 - Recipe ingredients will be highlighted <span style="color:GhostWhite;background-color:Crimson">red</span> if they are missing or expired.  
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.5.2 Delete Recipe
 
@@ -422,7 +438,9 @@ Delete recipe(s) from the Recipe Book.
 - If multiple index numbers are specified, Fridgy will delete the recipes at all specified index numbers.
 
 [\[Back to Table of Contents\]](#table-of-contents)
- 
+
+<div style="page-break-after: always;"></div>
+
 #### 4.5.3 Edit Recipe
 
 Edit a recipe from the Recipe Book.
@@ -451,6 +469,8 @@ Edit a recipe from the Recipe Book.
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 #### 4.5.4 Clear Recipe
 
 Clear all recipes from the Recipe Book.
@@ -464,6 +484,8 @@ Clear all recipes from the Recipe Book.
 ![clearRecipe.png](images/recipeCommands/clearRecipe.png)
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.5.5 Find Recipe
 
@@ -506,6 +528,8 @@ Switch to Recipe [tab](#31-tabs) and list all recipes.
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 #### 4.5.7 View Recipe
 
 Open a detailed view of a recipe in the [Main Window](#36-mainwindow).
@@ -523,6 +547,8 @@ Open a detailed view of a recipe in the [Main Window](#36-mainwindow).
   [Side Bar](#32-side-bar).
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.5.8 Cook Recipe
 
