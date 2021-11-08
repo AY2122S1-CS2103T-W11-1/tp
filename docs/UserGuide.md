@@ -37,6 +37,7 @@ This User Guide covers:
 [\[Back to Table of Contents\]](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 <a name="QuickStart"></a>
 
@@ -86,6 +87,8 @@ To exit Fridgy, type `exit`, or simply close the application window.
 
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 ## 3. UI
 
 ![Ui](images/Ui layout.png)
@@ -107,6 +110,9 @@ Displays the output of `View` command, which expands each ingredient or recipe c
 [\[Back to Table of Contents\]](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ## 4. Features
 
 ### 4.1 Command Notations Used
@@ -131,6 +137,8 @@ Displays the output of `View` command, which expands each ingredient or recipe c
 
 [\[Back to Table of Contents\]](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### 4.2 Command Overview
 
 #### 4.2.1 Command Flags
@@ -146,6 +154,8 @@ Displays the output of `View` command, which expands each ingredient or recipe c
 `-t` | `-t <tag>...` | Tag for the ingredient | No | Can contain alphanumeric characters or spaces. There can be at most 1 space between alphanumeric characters.
 
 [\[Back to Table of Contents\]](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 #### 4.2.2 Command Summary
 
@@ -540,6 +550,9 @@ Cook a recipe and deduct the ingredients required by the chosen recipe from the 
 [\[Back to Table of Contents\]](#table-of-contents)
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ## 5. Glossary
 
 | Term | Definition |
